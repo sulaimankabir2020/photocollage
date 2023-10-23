@@ -3,6 +3,10 @@ img {
     height: 100%;
 }
 
+.head {
+    text-align: center;
+}
+
 .row {
     height: 400px;
     display: flex;
@@ -19,7 +23,23 @@ img {
 }
 
 .square-collage {
-    display: grid;      
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
+}
+
+/* responsive media query */
+
+@media screen and (max-width: 576px) {
+
+    .row {
+        flex-direction: column;
+        height: auto;
+
+    }
+
+    .square-collage {
+        grid-template-columns: 1fr;
+
+    }
 }
